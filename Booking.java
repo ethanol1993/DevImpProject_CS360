@@ -1,24 +1,32 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 public class Booking {
-    private String membership;
+// member should be able to browse schedule by day, trainer, and type
+    private ArrayList<GymClass> schedule;
 
-    public void updateProfile(){
-
+    public void browseByDay(LocalDate day) {
+        for (GymClass g : schedule) {
+            if (g.getDay().equals(day)) {
+                System.out.println(g);
+            }
+        }
     }
 
-    public void createAccount(){
-
+    public void browseByTrainer(Trainer trainer) {
+        for (GymClass g : schedule) {
+            if (g.getTrainer().equals(trainer)) {
+                System.out.println(g);
+            }
+        }
     }
 
-    public String memberStatus(){
-        return null;
-    }
-
-    public void renewMember(){
-
-    }
-
-    public String getMembership(){
-        return null;
+    public void browseByType(String type) {
+        for (GymClass g : schedule) {
+            if (g.getType().equals(type)) {
+                System.out.println(g);
+            }
+        }
     }
 
 }
