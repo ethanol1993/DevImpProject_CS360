@@ -1,5 +1,5 @@
 // Would need to connect this to a database since there would be multiple accounts in the database.
-public class member {
+public class Member {
     String name = "";
     String membership = "";
     double money = 0;
