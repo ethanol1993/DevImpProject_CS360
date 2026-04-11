@@ -1,4 +1,4 @@
-public class System {
+public class GymSystem {
 
     String membership;
     float money;
