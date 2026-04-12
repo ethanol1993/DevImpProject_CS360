@@ -11,10 +11,16 @@ public class qr {
     }
 
     public void generateQR(){
-
+        System.out.println("Generating QR Code.");
+        System.out.println("Generating QR Code..");
+        System.out.println("Generating QR Code...");
+        System.out.println("Generated!");
     }
 
     public void scanQR(){
-
+        System.out.println("Scanning QR Code.");
+        System.out.println("Scanning QR Code..");
+        System.out.println("Scanning QR Code...");
+        System.out.println("Scanned!");
     }
 }

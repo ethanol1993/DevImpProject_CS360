@@ -1,10 +1,15 @@
 // Would need to connect this to a database since there would be multiple accounts in the database.
-public class Member {
-    String name = "";
-    String membership = "";
-    double money = 0;
 
-    account account;
+import java.util.Scanner;
+
+public class member {
+    private String name;
+    private String membership;
+    private double money;
+
+    Scanner scan = new Scanner(System.in);
+
+    account account = new account();
 
     // Getters
 
@@ -23,19 +28,29 @@ public class Member {
 
     // Functions
 
+    public void updateMembership(String newMembership){
+        account.updateMembership(newMembership);
+    }
+
     public void makeAcount(){
         account.createAccount();
         name = account.getAccount();
         membership = account.getMembership();
     }
 
-    public void signIn(){
-        // Requires checking input name and password and searching the data base to find it.
-        // Sets name and membership to the account's name and memebership.
-        // Requires database.
-        this.name = account.getAccount();
-        this.membership = account.getMembership();
-        this.money = account.getMoney();
+    public int signIn(){
+        System.out.println("Please enter your username");
+        String username = scan.nextLine();
+
+        System.out.println("Please enter your password");
+        String password = scan.nextLine();
+        if(username.equals(name) && password.equals(account.getPassword())){
+            System.out.println("Login successful!");
+            return 1;
+        }else{
+            System.out.println("Login failed.");
+            return 3;
+        }
     }
 
     // Makes QR code to check in. Can't make for obvious reason.

@@ -11,8 +11,8 @@ public class GymClass {
     public LocalDate day;
     public String type;
 
-    public ArrayList<Member> bookedMembers;
-    public Queue<Member> waitlist; 
+    public ArrayList<member> bookedMembers;
+    public Queue<member> waitlist; 
 
     public GymClass(LocalTime time, int capacity, Trainer trainer, LocalDate day, String type) {
         this.time = time;
@@ -23,7 +23,7 @@ public class GymClass {
         this.bookedMembers = new ArrayList<>();
     }
 
-    public boolean bookClass(Member member) {
+    public boolean bookClass(member member) {
         if (bookedMembers.size() < capacity) {
             bookedMembers.add(member);
             return true;
@@ -34,9 +34,9 @@ public class GymClass {
         }
     }
 
-    public void cancelBooking(Member member) {
+    public void cancelBooking(member member) {
         bookedMembers.remove(member);
-        fillEmptyClassSpot();
+        //fillEmptyClassSpot();
         
     }
 

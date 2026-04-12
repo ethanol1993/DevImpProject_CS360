@@ -1,18 +1,18 @@
 public class GymSystem {
 
     String membership;
-    float money;
+    double money;
     
     public double sendReceipt() {
         return 0.0;
     }
 
-    public String updateMembership () {
-        return null;
+    public void updateMembership (String membership, member member) {
+        member.updateMembership(membership);
     }
 
-    public void getMoney() {
-
+    public double getMoney() {
+        return money;
     }
 
 }

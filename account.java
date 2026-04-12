@@ -1,5 +1,4 @@
-import java.util.Scanner;
-import static java.lang.System.out;
+ import java.util.Scanner;
 
 public class account {
     
@@ -48,6 +47,10 @@ public class account {
     // Functions
 
     // Updates info
+
+    public void updateMembership(String newMemberShip){
+        membership = newMemberShip;
+    }
 
     public void readProfile(){
     System.out.println("Account Name: " + userAccount);
