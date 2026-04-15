@@ -3,8 +3,9 @@ public class GymSystem {
     String membership;
     double money;
     
-    public double sendReceipt() {
-        return 0.0;
+    public String sendReceipt() {
+        String receipt = "Current balance: " + money + "\nCurrent Membership: " + membership;
+        return receipt;
     }
 
     public void updateMembership (String membership, member member) {
